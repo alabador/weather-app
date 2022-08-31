@@ -1,0 +1,23 @@
+{
+  "name": "weather-app",
+  "version": "1.0.0",
+  "description": "A weather app to practice async functions and using APIs.",
+  "main": "main.js",
+  "scripts": {
+    
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alabador/weather-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alabador/weather-app/issues"
+  },
+  "homepage": "https://github.com/alabador/weather-app#readme",
+  "dependencies": {
+    "tailwindcss": "^3.1.8"
+  }
+}
