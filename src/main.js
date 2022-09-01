@@ -13,7 +13,7 @@ let weather = {
         .then((response) => response.json())
         .then((random) => console.log(random));
     },
-
+    //next function is to display to ui
 }
 
 function saveSearchValue(e) {

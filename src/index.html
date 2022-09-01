@@ -8,7 +8,9 @@
     <link href="/dist/output.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body class="bg-blue-200">
+<body 
+style="background-image: url('https://images.unsplash.com/photo-1530908295418-a12e326966ba?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80');"
+class="bg-blue-200 bg-no-repeat h-full bg-cover">
     <header class="header flex justify-center items-center mt-8">
         <form action="" id="search-form" class="border-b border-blue-400 w-max pb-2">
             <input type="text" name="location" class="searchbar focus:outline-none bg-transparent" id="searchbar" placeholder="Enter a City">
@@ -16,9 +18,9 @@
         </form>
     </header>
     <main>
-        <section class="weather-main-container">
-            <div class="location-header-container flex flex-col items-center justify-center mt-8">
-                <h3 class="location-header text-2xl font-semibold">Seattle, Washington</h3>
+        <section class="weather-main-container bg-gray-400/50 m-8 rounded-xl">
+            <div class="location-header-container flex flex-col items-center justify-center mt-8 pt-8">
+                <h3 class="location-header text-3xl font-semibold">Seattle</h3>
                 <p class="current-day">Wednesday, August 31</p>
             </div>
             
