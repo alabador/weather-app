@@ -612,11 +612,6 @@ video {
   background-color: transparent;
 }
 
-.bg-slate-200 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(226 232 240 / var(--tw-bg-opacity));
-}
-
 .pb-2 {
   padding-bottom: 0.5rem;
 }
