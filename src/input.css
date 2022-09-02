@@ -8,7 +8,7 @@
 }
 
 .card{
-    @apply flex justify-between items-center bg-white rounded shadow-sm p-8 my-4;
+    @apply flex justify-between items-center bg-white rounded shadow-sm p-6 mt-4;
 }
 
 .fa-cloud {

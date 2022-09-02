@@ -10,7 +10,7 @@
 </head>
 <body 
 style="background-image: url('https://images.unsplash.com/photo-1530908295418-a12e326966ba?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80');"
-class="bg-blue-200 bg-no-repeat h-full bg-cover">
+class="bg-no-repeat bg-cover h-screen">
     <header class="header flex justify-center items-center mt-8">
         <form action="" id="search-form" class="border-b border-blue-400 w-max pb-2">
             <input type="text" name="location" class="searchbar focus:outline-none bg-transparent" id="searchbar" placeholder="Enter a City">
@@ -21,25 +21,25 @@ class="bg-blue-200 bg-no-repeat h-full bg-cover">
         <section class="weather-main-container bg-gray-400/50 m-8 rounded-xl">
             <div class="location-header-container flex flex-col items-center justify-center mt-8 pt-8">
                 <h3 class="location-header text-3xl font-semibold">Seattle</h3>
-                <p class="current-day">Wednesday, August 31</p>
             </div>
             
             <div class="current-weather-container grid grid-cols-1 grid-rows-2 mt-8">
                 <div class="location-main weather-grid">
                     <div class="current-temp-container">
-                        <h1 class="current-temp text-massive text-center">70°</h1>
+                        <h1 class="current-temp text-massive text-center"><span class="temp-number">70</span>°F</h1>
                     </div>
                     <div class="feels-like-container">
-                        <h3 class="feels-like">Feels Like: 69°</h3>
+                        <h3 class="feels-like">Feels Like: <span class="feels-like-number">69</span>°F</h3>
                     </div>
                 </div>
-                <div class="sky-main weather-grid">
+                <div class="sky-main flex flex-row items-center justify-center gap-4">
                     <div class="sky-icon-container">
-                        <i class="fa-solid fa-cloud"></i>
+                        <!-- <i class="fa-solid fa-cloud"></i> -->
+                        <img class="weather-icon" src="" alt="" srcset="">
                     </div>
-                    <!-- <div class="sky-description-container">
+                    <div class="sky-description-container">
                         <h3 class="sky-description">Cloudy</h3>
-                    </div> -->
+                    </div>
                 </div>
             </div>
         </section>
