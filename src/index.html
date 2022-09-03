@@ -10,7 +10,7 @@
 </head>
 <body 
 style="background-image: url('https://images.unsplash.com/photo-1530908295418-a12e326966ba?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80');"
-class="bg-no-repeat bg-cover h-screen">
+class="bg-no-repeat bg-cover h-screen min-h-screen">
     <header class="header flex justify-center items-center mt-8">
         <form action="" id="search-form" class="border-b border-blue-400 w-max pb-2">
             <input type="text" name="location" class="searchbar focus:outline-none bg-transparent" id="searchbar" placeholder="Enter a City">
@@ -34,7 +34,7 @@ class="bg-no-repeat bg-cover h-screen">
                 </div>
                 <div class="sky-main flex flex-row items-center justify-center gap-4">
                     <div class="sky-icon-container">
-                        <!-- <i class="fa-solid fa-cloud"></i> -->
+                        
                         <img class="weather-icon" src="" alt="" srcset="">
                     </div>
                     <div class="sky-description-container">
@@ -55,12 +55,12 @@ class="bg-no-repeat bg-cover h-screen">
                 </div>
             </div>
 
-            <div class="humidity-container card">
-                <div class="humidity-info">
-                    <h3 class="humidity-header text-2xl font-light">Humidity</h3>
-                    <h2 class="humidity-value text-xl font-bold">68</h2>
+            <div class="wind-container card">
+                <div class="wind-info">
+                    <h3 class="wind-header text-2xl font-light">Wind Speed</h3>
+                    <h2 class="wind-value text-xl font-bold"><span class="wind-number">68</span> MPH</h2>
                 </div>
-                <div class="humidity-icon">
+                <div class="wind-icon">
                     <i class="fa-solid fa-droplet"></i>
                 </div>
             </div>
