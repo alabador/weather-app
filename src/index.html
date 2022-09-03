@@ -10,16 +10,16 @@
 </head>
 <body 
 style="background-image: url('https://images.unsplash.com/photo-1530908295418-a12e326966ba?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80');"
-class="bg-no-repeat bg-cover h-screen min-h-screen">
+class="bg-no-repeat bg-cover h-max flex flex-col">
     <header class="header flex justify-center items-center mt-8">
         <form action="" id="search-form" class="border-b border-blue-400 w-max pb-2">
             <input type="text" name="location" class="searchbar focus:outline-none bg-transparent" id="searchbar" placeholder="Enter a City">
             <button type="submit" form="search-form">Search</button>
         </form>
     </header>
-    <main>
+    <main class="flex flex-col">
         <section class="weather-main-container bg-gray-400/50 m-8 rounded-xl">
-            <div class="location-header-container flex flex-col items-center justify-center mt-8 pt-8">
+            <div class="location-header-container flex flex-col items-center justify-center pt-8">
                 <h3 class="location-header text-3xl font-semibold">Seattle</h3>
             </div>
             
