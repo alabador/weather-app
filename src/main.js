@@ -49,6 +49,5 @@ async function getLocation() {
     // console.log(data);
 }
 
-//Functions will check if country is inside US. If inside US, will use
-//name of city and state.
-//If not in US, will use name of city and Country. 
+//Initial function call to set real-time data
+weather.getWeather('Los Angeles');
