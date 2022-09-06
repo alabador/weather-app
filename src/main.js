@@ -12,6 +12,7 @@ let weather = {
         .then((data) => {
             console.log(data);
             this.displayWeather(data);
+            this.conversion = 'imperial';
         });
     },
     //next function is to display to ui
@@ -32,7 +33,14 @@ let weather = {
     },
     search: function() {
         this.getWeather(document.querySelector('.searchbar').value);
-    }
+    },
+    changeImg: function() {
+        const imageUrl = "url('https://picsum.photos/800')";
+        const body = document.querySelector('body');
+        // document.body.style.backgroundImage = none;
+        document.body.style.backgroundImage = imageUrl;
+    },
+    conversion: 'imperial',
 }
 
 //To do: 
@@ -45,7 +53,13 @@ const form = document.querySelector('#search-form');
 form.addEventListener("submit", function(e) {
     e.preventDefault();
     weather.search();
+    weather.changeImg();
 }); 
+
+const switchButton = document.querySelector('.temp-switch');
+switchButton.addEventListener("click", function(e){
+   
+})
 
 //Initial function call to set real-time data
 weather.getWeather('Los Angeles');

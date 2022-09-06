@@ -8,7 +8,7 @@
 }
 
 .card{
-    @apply flex justify-between items-center bg-white/75 rounded shadow-sm p-6 my-4;
+    @apply flex justify-between items-center bg-white rounded shadow-sm p-6 my-4;
 }
 
 .fa-cloud {
@@ -17,4 +17,8 @@
 
 .fa-droplet {
     font-size: 24px;
+}
+
+.temp-switch {
+    border: 1px solid white;
 }
