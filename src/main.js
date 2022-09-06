@@ -32,19 +32,17 @@ let weather = {
     }
 }
 
+//To do: 
+//Change between farenheit and celsius
+//Change photo based on search query
+//Add info to bottom cards
+
 const form = document.querySelector('#search-form');
 
 form.addEventListener("submit", function(e) {
     e.preventDefault();
     weather.search();
-});
-
-/*Used to get location name and etc information*/
-async function getLocation() {
-    const response = await fetch('http://api.openweathermap.org/geo/1.0/direct?q=Guangzhou&appid=fb47c3a686e3aefa6c40797334a495df');
-    const data = await response.json();
-    // console.log(data);
-}
+}); 
 
 //Functions will check if country is inside US. If inside US, will use
 //name of city and state.
