@@ -17,14 +17,17 @@ let weather = {
     //next function is to display to ui
     displayWeather: function(data) {
         const {name} = data;
-        const {temp, feels_like} = data.main;
+        const {temp, feels_like, humidity} = data.main;
         const {icon, main} = data.weather[0];
+        const {speed} = data.wind;
 
         document.querySelector('.location-header').textContent = name;
         document.querySelector('.temp-number').textContent = Math.round(temp);
         document.querySelector('.feels-like-number').textContent = Math.round(feels_like);
         document.querySelector('.weather-icon').src = `http://openweathermap.org/img/wn/${icon}@2x.png`
         document.querySelector('.sky-description').textContent = main;
+        document.querySelector('.humidity-value').textContent = humidity;
+        document.querySelector('.wind-number').textContent = speed;
         console.log(main);
     },
     search: function() {
@@ -44,6 +47,5 @@ form.addEventListener("submit", function(e) {
     weather.search();
 }); 
 
-//Functions will check if country is inside US. If inside US, will use
-//name of city and state.
-//If not in US, will use name of city and Country. 
+//Initial function call to set real-time data
+weather.getWeather('Los Angeles');
