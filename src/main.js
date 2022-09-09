@@ -2,7 +2,7 @@
 let weather = {
     apiKey: "fb47c3a686e3aefa6c40797334a495df",
     getWeather: function(city) {
-        fetch("http://api.openweathermap.org/data/2.5/weather?q="
+        fetch("https://api.openweathermap.org/data/2.5/weather?q="
             + city
             + "&units=imperial"
             + "&APPID="
@@ -25,7 +25,7 @@ let weather = {
         document.querySelector('.location-header').textContent = name;
         document.querySelector('.temp-number').textContent = Math.round(temp);
         document.querySelector('.feels-like-number').textContent = Math.round(feels_like);
-        document.querySelector('.weather-icon').src = `http://openweathermap.org/img/wn/${icon}@2x.png`
+        document.querySelector('.weather-icon').src = `https://openweathermap.org/img/wn/${icon}@2x.png`
         document.querySelector('.sky-description').textContent = main;
         document.querySelector('.humidity-value').textContent = humidity;
         document.querySelector('.wind-number').textContent = speed;
