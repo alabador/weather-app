@@ -1,6 +1,7 @@
 # weather-app
 A weather app to practice async functions and using APIs.
-!(Weather App Image)[./img/Screenshot_2022-11-08_16-30-36.png]
+
+![Weather App Image](./img/Screenshot_2022-11-08_16-30-36.png)
 
 https://alabador.github.io/weather-app/
 
