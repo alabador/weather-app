@@ -2,24 +2,28 @@
 // https://api.openweathermap.org/data/2.5/weather?q=london&units=imperial&APPID=fb47c3a686e3aefa6c40797334a495df
 let weather = {
     apiKey: "fb47c3a686e3aefa6c40797334a495df",
-    getWeather: function(city) {
-        fetch("https://api.openweathermap.org/data/2.5/weather?q="
+    getWeather: async function(city) {
+        const res = await fetch("https://api.openweathermap.org/data/2.5/weather?q="
             + city
             + "&units=imperial"
             + "&APPID="
             + this.apiKey
-        )
-        .then((response) => response.json())
-        .then((data) => {
-            console.log(data);
-            this.displayWeather(data);
-            this.conversion = 'imperial';
-        });
+        );
+        const jsonRes = await res.json()
+        this.displayWeather(jsonRes);
+        this.conversion = 'imperial';
     },
 
     getForecast: async function(city) {
-        const response = await fetch()
+        const res = await fetch("https://api.openweathermap.org/data/2.5/forecast?q="
+            + city
+            + "&units=imperial"
+            + "&APPID="
+            + this.apiKey
+        );
+        const jsonRes = await res.json()
     },
+
     //next function is to display to ui
     displayWeather: function(data) {
         const {name} = data;
@@ -42,6 +46,7 @@ let weather = {
     },
 
     search: function() {
+        // this.getWeather(document.querySelector('#searchbar').value);
         this.getWeather(document.querySelector('#searchbar').value);
     },
     // changeImg: function() {
