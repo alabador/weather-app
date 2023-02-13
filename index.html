@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="business">
+<html lang="en" data-theme="pastel">
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -51,7 +51,7 @@
 		<main>
 			<div class="grid grid-cols-1 md:grid-cols-2 mt-8">
                 <!-- <div class="grid col-span-2 w-full h-8 bg-slate-300"></div> div for bg -->
-				<div class="card grid grid-cols-2 bg-primary shadow-xl p-4">
+				<div class="card grid grid-cols-2 bg-primary shadow-xl p-4 rounded-lg">
 					<div
 						class="location-header-container flex flex-col justify-center">
 						<h3 class="location-header text-3xl font-semibold">
@@ -118,37 +118,29 @@
 			</div>
 
             <!-- replace table with something more responsive! -->
-            <section class="mt-8 w-max flex justify-items-stretch">
-                <table class="table table-zebra w-full">
-                  <!-- head -->
-                  <thead>
-                    <tr>
-                      <th>Day</th>
-                      <th>Current Temp</th>
-                      <th>Weather Condition</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <!-- row 1 -->
-                    <tr>
-                      <td>Cy Ganderton</td>
-                      <td>85</td>
-                      <td>Blue</td>
-                    </tr>
-                    <!-- row 2 -->
-                    <tr>
-                      <td>Hart Hagerty</td>
-                      <td>67</td>
-                      <td>Purple</td>
-                    </tr>
-                    <!-- row 3 -->
-                    <tr>
-                      <td>Brice Swyre</td>
-                      <td>73</td>
-                      <td>Red</td>
-                    </tr>
-                  </tbody>
-                </table>
+            <section class="forecast-container mt-8 w-full">
+				<div class="stats stats-horizontal shadow w-full">
+					<div class="stat">
+						<div class="stat-title">February 13th, 2023</div>
+						<div class="stat-value"><span id="day1-temp">67</span>°F</div>
+						<div class="stat-desc">February 13th, 2023</div>
+					</div>
+					<div class="stat">
+						<div class="stat-title"><i class="fa-solid fa-cloud-sun"></i></div>
+						<div class="stat-value"><span id="day1-condition">Light Rain</span></div>
+						<div class="stat-desc">Weather Condition</div>
+					</div>
+					<div class="stat">
+						<div class="stat-title"><i class="fa-solid fa-temperature-arrow-up"></i></div>
+						<div class="stat-value"><span id="day1-max-temp">74</span>°F</div>
+						<div class="stat-desc">Max. Temp</div>
+					</div>
+					<div class="stat">
+						<div class="stat-title"><i class="fa-solid fa-temperature-arrow-down"></i></div>
+						<div class="stat-value"><span id="day1-max-temp">59</span>°F</div>
+						<div class="stat-desc">Min. Temp</div>
+					</div>
+				</div>
             </section>
 		</main>
 		<script src="./src/main.js"></script>
