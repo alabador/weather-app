@@ -6,15 +6,11 @@
     @apply flex flex-col justify-center items-center text-center;
 } */
 
-.card{
-    @apply flex justify-between items-center bg-white rounded shadow-sm p-6 my-4;
-}
-
 .fa-cloud {
     font-size: 64px;
 }
 
-.fa-droplet {
+.fa-wind {
     font-size: 24px;
 }
 

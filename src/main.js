@@ -1,4 +1,5 @@
-
+//testing purposes
+// https://api.openweathermap.org/data/2.5/weather?q=london&units=imperial&APPID=fb47c3a686e3aefa6c40797334a495df
 let weather = {
     apiKey: "fb47c3a686e3aefa6c40797334a495df",
     getWeather: function(city) {
@@ -14,6 +15,10 @@ let weather = {
             this.displayWeather(data);
             this.conversion = 'imperial';
         });
+    },
+
+    getForecast: async function(city) {
+        const response = await fetch()
     },
     //next function is to display to ui
     displayWeather: function(data) {
@@ -31,15 +36,20 @@ let weather = {
         document.querySelector('.wind-number').textContent = speed;
         console.log(main);
     },
+
+    displayForecast: function(data) {
+
+    },
+
     search: function() {
         this.getWeather(document.querySelector('#searchbar').value);
     },
-    changeImg: function() {
-        const imageUrl = "url('https://picsum.photos/800')";
-        const body = document.querySelector('body');
-        // document.body.style.backgroundImage = none;
-        document.body.style.backgroundImage = imageUrl;
-    },
+    // changeImg: function() {
+    //     const imageUrl = "url('https://picsum.photos/800')";
+    //     const body = document.querySelector('body');
+    //     // document.body.style.backgroundImage = none;
+    //     document.body.style.backgroundImage = imageUrl;
+    // },
     conversion: 'imperial',
 }
 
@@ -53,7 +63,7 @@ const form = document.querySelector('#search-form');
 form.addEventListener("submit", function(e) {
     e.preventDefault();
     weather.search();
-    weather.changeImg();
+    // weather.changeImg();
 }); 
 
 const switchButton = document.querySelector('.temp-switch');
