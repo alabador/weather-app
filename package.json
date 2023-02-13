@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "A weather app to practice async functions and using APIs.",
   "main": "main.js",
-  "scripts": {},
+  "scripts": {
+    "start": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/alabador/weather-app.git"
@@ -15,8 +17,10 @@
     "url": "https://github.com/alabador/weather-app/issues"
   },
   "homepage": "https://github.com/alabador/weather-app#readme",
-  "dependencies": {},
+  "dependencies": {
+    "daisyui": "^2.50.0"
+  },
   "devDependencies": {
-    "tailwindcss": "^3.1.8"
+    "tailwindcss": "^3.2.6"
   }
 }

@@ -32,7 +32,7 @@ let weather = {
         console.log(main);
     },
     search: function() {
-        this.getWeather(document.querySelector('.searchbar').value);
+        this.getWeather(document.querySelector('#searchbar').value);
     },
     changeImg: function() {
         const imageUrl = "url('https://picsum.photos/800')";
