@@ -22,6 +22,7 @@ let weather = {
             + this.apiKey
         );
         const jsonRes = await res.json()
+        this.displayForecast(jsonRes);
     },
 
     //next function is to display to ui
@@ -34,7 +35,7 @@ let weather = {
         document.querySelector('.location-header').textContent = name;
         document.querySelector('.temp-number').textContent = Math.round(temp);
         document.querySelector('.feels-like-number').textContent = Math.round(feels_like);
-        document.querySelector('.weather-icon').src = `https://openweathermap.org/img/wn/${icon}@2x.png`
+        // document.querySelector('.weather-icon').src = `https://openweathermap.org/img/wn/${icon}@2x.png`
         document.querySelector('.sky-description').textContent = main;
         document.querySelector('.humidity-value').textContent = humidity;
         document.querySelector('.wind-number').textContent = speed;
@@ -42,12 +43,31 @@ let weather = {
     },
 
     displayForecast: function(data) {
+        const dates = document.querySelectorAll('.current-date');
+        const temps = document.querySelectorAll('.temp-today');
+        const conditions = document.querySelectorAll('.weather-condition');
+        const minTemps = document.querySelectorAll('.min-temp');
+        const maxTemps = document.querySelectorAll('.max-temp');
 
+        for(let i = 0; i < data.list.length; i++){
+            const currentData = data.list[i];
+            const {dt_txt:date} = currentData;
+            const {temp, temp_min, temp_max} = currentData.main;
+            const {description} = currentData.weather[0];
+
+            //Array destructuring - get data from json and put into html
+            [dates[i].textContent, 
+            temps[i].textContent, 
+            conditions[i], 
+            minTemps[i], 
+            maxTemps[i]] = [date, temp, description, temp_min, temp_max];
+        }
     },
 
     search: function() {
         // this.getWeather(document.querySelector('#searchbar').value);
         this.getWeather(document.querySelector('#searchbar').value);
+        this.getForecast(document.querySelector('#searchbar').value);
     },
     // changeImg: function() {
     //     const imageUrl = "url('https://picsum.photos/800')";
