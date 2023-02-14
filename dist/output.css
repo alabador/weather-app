@@ -1522,10 +1522,6 @@ html {
   overflow-y: auto;
 }
 
-.col-span-2 {
-  grid-column: span 2 / span 2;
-}
-
 .my-8 {
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -1549,10 +1545,6 @@ html {
 
 .h-6 {
   height: 1.5rem;
-}
-
-.h-8 {
-  height: 2rem;
 }
 
 .w-6 {
@@ -1600,14 +1592,9 @@ html {
   background-color: hsl(var(--n) / var(--tw-bg-opacity));
 }
 
-.bg-primary {
+.bg-white {
   --tw-bg-opacity: 1;
-  background-color: hsl(var(--p) / var(--tw-bg-opacity));
-}
-
-.bg-slate-300 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(203 213 225 / var(--tw-bg-opacity));
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 .object-center {
@@ -1621,6 +1608,15 @@ html {
 
 .p-6 {
   padding: 1.5rem;
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .text-2xl {
@@ -1638,6 +1634,11 @@ html {
   line-height: 1;
 }
 
+.text-8xl {
+  font-size: 6rem;
+  line-height: 1;
+}
+
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
@@ -1649,6 +1650,10 @@ html {
 
 .font-light {
   font-weight: 300;
+}
+
+.font-normal {
+  font-weight: 400;
 }
 
 .font-semibold {
@@ -1684,9 +1689,31 @@ html {
 }
 
 body {
-  background-image: url('../img/kenrick-mills-1h2Pg97SXfA-unsplash.jpg');
+  background-image: url('../img/jonathan-klok-NeRzxya_zyI-unsplash\ \(1\).jpg');
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.stats-fixed-horizontal {
+  grid-auto-flow: column;
+}
+
+.stats-fixed-horizontal > :not([hidden]) ~ :not([hidden]) {
+  --tw-divide-x-reverse: 0;
+  border-right-width: calc(1px * var(--tw-divide-x-reverse));
+  border-left-width: calc(1px * calc(1 - var(--tw-divide-x-reverse)));
+  --tw-divide-y-reverse: 0;
+  border-top-width: calc(0px * calc(1 - var(--tw-divide-y-reverse)));
+  border-bottom-width: calc(0px * var(--tw-divide-y-reverse));
+}
+
+.stats-fixed-horizontal {
+  overflow-x: auto;
+  grid-template-columns: repeat(4, 25%);
+}
+
+.weather-condition {
+  font-size: 1.5rem;
 }
 
 @media (min-width: 768px) {
@@ -1726,5 +1753,11 @@ body {
 
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:p-16 {
+    padding: 4rem;
   }
 }

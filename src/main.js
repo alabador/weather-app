@@ -28,18 +28,13 @@ let weather = {
     //next function is to display to ui
     displayWeather: function(data) {
         const {name} = data;
-        const {temp, feels_like, humidity} = data.main;
-        const {icon, main} = data.weather[0];
-        const {speed} = data.wind;
+        const {temp} = data.main;
+        const {main, icon} = data.weather[0];
 
         document.querySelector('.location-header').textContent = name;
         document.querySelector('.temp-number').textContent = Math.round(temp);
-        document.querySelector('.feels-like-number').textContent = Math.round(feels_like);
-        // document.querySelector('.weather-icon').src = `https://openweathermap.org/img/wn/${icon}@2x.png`
+        document.querySelector('.weather-icon').src = `https://openweathermap.org/img/wn/${icon}@2x.png`
         document.querySelector('.sky-description').textContent = main;
-        document.querySelector('.humidity-value').textContent = humidity;
-        document.querySelector('.wind-number').textContent = speed;
-        console.log(main);
     },
 
     displayForecast: function(data) {
@@ -56,10 +51,6 @@ let weather = {
             const {dt_txt:date} = currentData;
             const {temp, temp_min, temp_max} = currentData.main;
             const {description} = currentData.weather[0];
-            // const currentData = data.list[i];
-            // const {dt_txt:date} = currentData;
-            // const {temp, temp_min, temp_max} = currentData.main;
-            // const {description} = currentData.weather[0];
             const formattedDate = date.split(' ')[0];
 
             //Array destructuring - get data from json and put into html
@@ -104,11 +95,6 @@ let weather = {
     // },
     conversion: 'imperial',
 }
-
-//To do: 
-//Change between farenheit and celsius
-//Change photo based on search query
-//Add info to bottom cards
 
 const form = document.querySelector('#search-form');
 

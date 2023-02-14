@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="pastel">
+<html lang="en" data-theme="night">
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -16,14 +16,14 @@
 			crossorigin="anonymous"
 			referrerpolicy="no-referrer" />
 	</head>
-	<body class="box-border p-6 sm:p-8">
+	<body class="box-border p-6 sm:p-8 lg:p-16">
 		<header class="header mt-8 object-center">
 			<form action="" id="search-form">
 				<div class="form-control">
 					<div class="input-group justify-center">
 						<input
 							type="text"
-							placeholder="Search…"
+							placeholder="Search City…"
 							class="input input-bordered flex-1 px"
 							id="searchbar" />
 						<button
@@ -49,66 +49,29 @@
 		</header>
 
 		<main>
-			<div class="grid grid-cols-1 md:grid-cols-2 mt-8">
-                <!-- <div class="grid col-span-2 w-full h-8 bg-slate-300"></div> div for bg -->
-				<div class="card grid grid-cols-2 bg-primary shadow-xl p-4 rounded-lg">
-					<div
-						class="location-header-container flex flex-col justify-center">
-						<h3 class="location-header text-3xl font-semibold">
-							Seattle
-						</h3>
-					</div>
-					<div class="current-weather-container card-body">
-						<div class="location-main">
-							<div class="current-temp-container">
-								<h1
-									class="current-temp text-6xl">
-									<span class="temp-number">--</span>°F
-								</h1>
-							</div>
-							<div class="feels-like-container">
-								<h3 class="feels-like">
-									Feels Like:
-									<span class="feels-like-number">69</span>°F
-								</h3>
-							</div>
-						</div>
-						<div class="sky-main flex flex-row items-center">
-							<div class="sky-description-container">
-								<h3 class="sky-description">Cloudy</h3>
-							</div>
-						</div>
+			<section class="weather-today-container w-full p-4 mt-8">
+				<div class="location-header-container flex justify-center">
+					<h3 class="location-header text-3xl font-normal">
+						Seattle
+					</h3>
+				</div>
+				<div class="current-temp-container text-center">
+					<h1 class="current-temp text-8xl py-4 font-bold">
+						<span class="temp-number">--</span>°F
+					</h1>
+				</div>
+				<div class="sky-main flex flex-row items-center justify-center">
+					<div class="sky-description-container">
+						<h3 class="sky-description">Cloudy</h3>
 					</div>
 				</div>
-
-				<section class="weather-stats flex flex-col justify-center my-8 md:ml-8 md:my-0">
-					<div class="humidity-container card">
-						<div class="humidity-info">
-							<h3 class="humidity-header text-2xl font-light">
-								Humidity
-							</h3>
-							<h2 class="humidity-value text-xl font-bold">-</h2>
-						</div>
-						<div class="humidity-icon">
-							<i class="fa-solid fa-droplet"></i>
-						</div>
+				<div class="icon-main flex flex-row items-center justify-center">
+					<div class="weather-icon-container">
+						<img src="" class="weather-icon">
 					</div>
-					<div class="wind-container card">
-						<div class="wind-info">
-							<h3 class="wind-header text-2xl font-light">
-								Wind Speed
-							</h3>
-							<h2 class="wind-value text-xl font-bold">
-								<span class="wind-number">-</span> MPH
-							</h2>
-						</div>
-						<div class="wind-icon">
-							<i class="fa-solid fa-wind"></i>
-						</div>
-					</div>
-				</section>
-			</div>
-
+				</div>
+			</section>
+			
             <div class="five-day-forecast mt-8">
 				<section class="forecast-container mt-8 w-full">
 								<div class="stats stats-vertical md:stats-horizontal shadow w-full">

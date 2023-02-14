@@ -19,7 +19,16 @@
 }
 
 body {
-    background-image: url('../img/kenrick-mills-1h2Pg97SXfA-unsplash.jpg');
+    background-image: url('../img/jonathan-klok-NeRzxya_zyI-unsplash\ \(1\).jpg');
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.stats-fixed-horizontal{
+    @apply stats-horizontal;
+    grid-template-columns: repeat(4, 25%);
+}
+
+.weather-condition {
+    font-size: 1.5rem;
 }
