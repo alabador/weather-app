@@ -49,19 +49,46 @@ let weather = {
         const minTemps = document.querySelectorAll('.min-temp');
         const maxTemps = document.querySelectorAll('.max-temp');
 
-        for(let i = 0; i < data.list.length; i++){
-            const currentData = data.list[i];
+        const fiveDayForecast = this.findUniqueDates(data);
+
+        for(let i = 0; i < fiveDayForecast.length; i++){
+            const currentData = fiveDayForecast[i];
             const {dt_txt:date} = currentData;
             const {temp, temp_min, temp_max} = currentData.main;
             const {description} = currentData.weather[0];
+            // const currentData = data.list[i];
+            // const {dt_txt:date} = currentData;
+            // const {temp, temp_min, temp_max} = currentData.main;
+            // const {description} = currentData.weather[0];
+            const formattedDate = date.split(' ')[0];
 
             //Array destructuring - get data from json and put into html
             [dates[i].textContent, 
             temps[i].textContent, 
-            conditions[i], 
-            minTemps[i], 
-            maxTemps[i]] = [date, temp, description, temp_min, temp_max];
+            conditions[i].textContent, 
+            minTemps[i].textContent, 
+            maxTemps[i].textContent] = [formattedDate, Math.round(temp), description, Math.round(temp_min), Math.round(temp_max)];
         }
+    },
+
+    //Get only unique dates from json data, to feed into displayForecast. 
+    //Compares strings from dates property to see if dates are unique.
+    //Gets first available time of the date.
+    findUniqueDates: function(data) {
+        const dataList = data.list;
+        const firstDate = dataList[0].dt_txt.split(' ')[0];
+        
+        const uniqueDates =  [dataList[0]];
+        const uniqueDateStrings = [firstDate];
+
+        for(let i = 0; i<dataList.length; i++){
+            const testDate = dataList[i].dt_txt.split(' ')[0]
+            if (!uniqueDateStrings.includes(testDate)){
+                uniqueDates.push(dataList[i]);
+                uniqueDateStrings.push(testDate);
+            }
+        }
+        return uniqueDates;
     },
 
     search: function() {
