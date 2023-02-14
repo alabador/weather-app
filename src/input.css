@@ -17,3 +17,9 @@
 .temp-switch {
     border: 1px solid white;
 }
+
+body {
+    background-image: url('../img/kenrick-mills-1h2Pg97SXfA-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}

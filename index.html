@@ -16,7 +16,7 @@
 			crossorigin="anonymous"
 			referrerpolicy="no-referrer" />
 	</head>
-	<body class="box-border sm:m-8">
+	<body class="box-border p-6 sm:p-8">
 		<header class="header mt-8 object-center">
 			<form action="" id="search-form">
 				<div class="form-control">
@@ -63,7 +63,7 @@
 							<div class="current-temp-container">
 								<h1
 									class="current-temp text-6xl">
-									<span class="temp-number">70</span>°F
+									<span class="temp-number">--</span>°F
 								</h1>
 							</div>
 							<div class="feels-like-container">
@@ -73,15 +73,7 @@
 								</h3>
 							</div>
 						</div>
-						<div
-							class="sky-main flex flex-row items-center">
-							<div class="sky-icon-container">
-								<!-- <img
-									class="weather-icon"
-									src=""
-									alt=""
-									srcset="" /> -->
-							</div>
+						<div class="sky-main flex flex-row items-center">
 							<div class="sky-description-container">
 								<h3 class="sky-description">Cloudy</h3>
 							</div>
@@ -89,13 +81,13 @@
 					</div>
 				</div>
 
-				<section class="weather-stats mx-8">
+				<section class="weather-stats flex flex-col justify-center my-8 md:ml-8 md:my-0">
 					<div class="humidity-container card">
 						<div class="humidity-info">
 							<h3 class="humidity-header text-2xl font-light">
 								Humidity
 							</h3>
-							<h2 class="humidity-value text-xl font-bold">68</h2>
+							<h2 class="humidity-value text-xl font-bold">-</h2>
 						</div>
 						<div class="humidity-icon">
 							<i class="fa-solid fa-droplet"></i>
@@ -107,7 +99,7 @@
 								Wind Speed
 							</h3>
 							<h2 class="wind-value text-xl font-bold">
-								<span class="wind-number">68</span> MPH
+								<span class="wind-number">-</span> MPH
 							</h2>
 						</div>
 						<div class="wind-icon">
@@ -117,127 +109,128 @@
 				</section>
 			</div>
 
-            <!-- replace table with something more responsive! -->
-            <section class="forecast-container mt-8 w-full">
-				<div class="stats stats-vertical md:stats-horizontal shadow w-full">
-					<div class="stat bg-neutral">
-						<div class="stat-title current-date">Date</div>
-						<div class="stat-value"><span class="temp-today">67</span>°F</div>
-						<div class="stat-desc">Average Temp</div>
-					</div>
-					<div class="stat">
-						<div class="stat-title"><i class="fa-solid fa-cloud-sun"></i></div>
-						<div class="stat-value"><span class="weather-condition">Light Rain</span></div>
-						<div class="stat-desc">Weather Condition</div>
-					</div>
-					<div class="stat">
-						<div class="stat-title"><i class="fa-solid fa-temperature-arrow-up"></i></div>
-						<div class="stat-value"><span class="min-temp">74</span>°F</div>
-						<div class="stat-desc">Max. Temp</div>
-					</div>
-					<div class="stat">
-						<div class="stat-title"><i class="fa-solid fa-temperature-arrow-down"></i></div>
-						<div class="stat-value"><span class="max-temp">59</span>°F</div>
-						<div class="stat-desc">Min. Temp</div>
-					</div>
-				</div>
-            </section>
-            <section class="forecast-container mt-8 w-full">
-				<div class="stats stats-vertical md:stats-horizontal shadow w-full">
-					<div class="stat bg-neutral">
-						<div class="stat-title current-date">Date</div>
-						<div class="stat-value"><span class="temp-today">67</span>°F</div>
-						<div class="stat-desc">Average Temp</div>
-					</div>
-					<div class="stat">
-						<div class="stat-title"><i class="fa-solid fa-cloud-sun"></i></div>
-						<div class="stat-value"><span class="weather-condition">Light Rain</span></div>
-						<div class="stat-desc">Weather Condition</div>
-					</div>
-					<div class="stat">
-						<div class="stat-title"><i class="fa-solid fa-temperature-arrow-up"></i></div>
-						<div class="stat-value"><span class="min-temp">74</span>°F</div>
-						<div class="stat-desc">Max. Temp</div>
-					</div>
-					<div class="stat">
-						<div class="stat-title"><i class="fa-solid fa-temperature-arrow-down"></i></div>
-						<div class="stat-value"><span class="max-temp">59</span>°F</div>
-						<div class="stat-desc">Min. Temp</div>
-					</div>
-				</div>
-            </section>
-            <section class="forecast-container mt-8 w-full">
-				<div class="stats stats-vertical md:stats-horizontal shadow w-full">
-					<div class="stat bg-neutral">
-						<div class="stat-title current-date">Date</div>
-						<div class="stat-value"><span class="temp-today">67</span>°F</div>
-						<div class="stat-desc">Average Temp</div>
-					</div>
-					<div class="stat">
-						<div class="stat-title"><i class="fa-solid fa-cloud-sun"></i></div>
-						<div class="stat-value"><span class="weather-condition">Light Rain</span></div>
-						<div class="stat-desc">Weather Condition</div>
-					</div>
-					<div class="stat">
-						<div class="stat-title"><i class="fa-solid fa-temperature-arrow-up"></i></div>
-						<div class="stat-value"><span class="min-temp">74</span>°F</div>
-						<div class="stat-desc">Max. Temp</div>
-					</div>
-					<div class="stat">
-						<div class="stat-title"><i class="fa-solid fa-temperature-arrow-down"></i></div>
-						<div class="stat-value"><span class="max-temp">59</span>°F</div>
-						<div class="stat-desc">Min. Temp</div>
-					</div>
-				</div>
-            </section>
-            <section class="forecast-container mt-8 w-full">
-				<div class="stats stats-vertical md:stats-horizontal shadow w-full">
-					<div class="stat bg-neutral">
-						<div class="stat-title current-date">Date</div>
-						<div class="stat-value"><span class="temp-today">67</span>°F</div>
-						<div class="stat-desc">Average Temp</div>
-					</div>
-					<div class="stat">
-						<div class="stat-title"><i class="fa-solid fa-cloud-sun"></i></div>
-						<div class="stat-value"><span class="weather-condition">Light Rain</span></div>
-						<div class="stat-desc">Weather Condition</div>
-					</div>
-					<div class="stat">
-						<div class="stat-title"><i class="fa-solid fa-temperature-arrow-up"></i></div>
-						<div class="stat-value"><span class="min-temp">74</span>°F</div>
-						<div class="stat-desc">Max. Temp</div>
-					</div>
-					<div class="stat">
-						<div class="stat-title"><i class="fa-solid fa-temperature-arrow-down"></i></div>
-						<div class="stat-value"><span class="max-temp">59</span>°F</div>
-						<div class="stat-desc">Min. Temp</div>
-					</div>
-				</div>
-            </section>
-            <section class="forecast-container mt-8 w-full">
-				<div class="stats stats-vertical md:stats-horizontal shadow w-full">
-					<div class="stat bg-neutral">
-						<div class="stat-title current-date">Date</div>
-						<div class="stat-value"><span class="temp-today">67</span>°F</div>
-						<div class="stat-desc">Average Temp</div>
-					</div>
-					<div class="stat">
-						<div class="stat-title"><i class="fa-solid fa-cloud-sun"></i></div>
-						<div class="stat-value"><span class="weather-condition">Light Rain</span></div>
-						<div class="stat-desc">Weather Condition</div>
-					</div>
-					<div class="stat">
-						<div class="stat-title"><i class="fa-solid fa-temperature-arrow-up"></i></div>
-						<div class="stat-value"><span class="min-temp">74</span>°F</div>
-						<div class="stat-desc">Max. Temp</div>
-					</div>
-					<div class="stat">
-						<div class="stat-title"><i class="fa-solid fa-temperature-arrow-down"></i></div>
-						<div class="stat-value"><span class="max-temp">59</span>°F</div>
-						<div class="stat-desc">Min. Temp</div>
-					</div>
-				</div>
-            </section>
+            <div class="five-day-forecast mt-8">
+				<section class="forecast-container mt-8 w-full">
+								<div class="stats stats-vertical md:stats-horizontal shadow w-full">
+									<div class="stat bg-neutral">
+										<div class="stat-title current-date">Date</div>
+										<div class="stat-value"><span class="temp-today">--</span>°F</div>
+										<div class="stat-desc">Average Temp</div>
+									</div>
+									<div class="stat">
+										<div class="stat-title"><i class="fa-solid fa-cloud-sun"></i></div>
+										<div class="stat-value"><span class="weather-condition">-</span></div>
+										<div class="stat-desc">Weather Condition</div>
+									</div>
+									<div class="stat">
+										<div class="stat-title"><i class="fa-solid fa-temperature-arrow-up"></i></div>
+										<div class="stat-value"><span class="min-temp">--</span>°F</div>
+										<div class="stat-desc">Max. Temp</div>
+									</div>
+									<div class="stat">
+										<div class="stat-title"><i class="fa-solid fa-temperature-arrow-down"></i></div>
+										<div class="stat-value"><span class="max-temp">--</span>°F</div>
+										<div class="stat-desc">Min. Temp</div>
+									</div>
+								</div>
+				</section>
+				<section class="forecast-container mt-8 w-full">
+								<div class="stats stats-vertical md:stats-horizontal shadow w-full">
+									<div class="stat bg-neutral">
+										<div class="stat-title current-date">Date</div>
+										<div class="stat-value"><span class="temp-today">--</span>°F</div>
+										<div class="stat-desc">Average Temp</div>
+									</div>
+									<div class="stat">
+										<div class="stat-title"><i class="fa-solid fa-cloud-sun"></i></div>
+										<div class="stat-value"><span class="weather-condition">-</span></div>
+										<div class="stat-desc">Weather Condition</div>
+									</div>
+									<div class="stat">
+										<div class="stat-title"><i class="fa-solid fa-temperature-arrow-up"></i></div>
+										<div class="stat-value"><span class="min-temp">--</span>°F</div>
+										<div class="stat-desc">Max. Temp</div>
+									</div>
+									<div class="stat">
+										<div class="stat-title"><i class="fa-solid fa-temperature-arrow-down"></i></div>
+										<div class="stat-value"><span class="max-temp">--</span>°F</div>
+										<div class="stat-desc">Min. Temp</div>
+									</div>
+								</div>
+				</section>
+				<section class="forecast-container mt-8 w-full">
+								<div class="stats stats-vertical md:stats-horizontal shadow w-full">
+									<div class="stat bg-neutral">
+										<div class="stat-title current-date">Date</div>
+										<div class="stat-value"><span class="temp-today">--</span>°F</div>
+										<div class="stat-desc">Average Temp</div>
+									</div>
+									<div class="stat">
+										<div class="stat-title"><i class="fa-solid fa-cloud-sun"></i></div>
+										<div class="stat-value"><span class="weather-condition">-</span></div>
+										<div class="stat-desc">Weather Condition</div>
+									</div>
+									<div class="stat">
+										<div class="stat-title"><i class="fa-solid fa-temperature-arrow-up"></i></div>
+										<div class="stat-value"><span class="min-temp">--</span>°F</div>
+										<div class="stat-desc">Max. Temp</div>
+									</div>
+									<div class="stat">
+										<div class="stat-title"><i class="fa-solid fa-temperature-arrow-down"></i></div>
+										<div class="stat-value"><span class="max-temp">--</span>°F</div>
+										<div class="stat-desc">Min. Temp</div>
+									</div>
+								</div>
+				</section>
+				<section class="forecast-container mt-8 w-full">
+								<div class="stats stats-vertical md:stats-horizontal shadow w-full">
+									<div class="stat bg-neutral">
+										<div class="stat-title current-date">Date</div>
+										<div class="stat-value"><span class="temp-today">--</span>°F</div>
+										<div class="stat-desc">Average Temp</div>
+									</div>
+									<div class="stat">
+										<div class="stat-title"><i class="fa-solid fa-cloud-sun"></i></div>
+										<div class="stat-value"><span class="weather-condition">-</span></div>
+										<div class="stat-desc">Weather Condition</div>
+									</div>
+									<div class="stat">
+										<div class="stat-title"><i class="fa-solid fa-temperature-arrow-up"></i></div>
+										<div class="stat-value"><span class="min-temp">--</span>°F</div>
+										<div class="stat-desc">Max. Temp</div>
+									</div>
+									<div class="stat">
+										<div class="stat-title"><i class="fa-solid fa-temperature-arrow-down"></i></div>
+										<div class="stat-value"><span class="max-temp">--</span>°F</div>
+										<div class="stat-desc">Min. Temp</div>
+									</div>
+								</div>
+				</section>
+				<section class="forecast-container mt-8 w-full">
+								<div class="stats stats-vertical md:stats-horizontal shadow w-full">
+									<div class="stat bg-neutral">
+										<div class="stat-title current-date">Date</div>
+										<div class="stat-value"><span class="temp-today">--</span>°F</div>
+										<div class="stat-desc">Average Temp</div>
+									</div>
+									<div class="stat">
+										<div class="stat-title"><i class="fa-solid fa-cloud-sun"></i></div>
+										<div class="stat-value"><span class="weather-condition">-</span></div>
+										<div class="stat-desc">Weather Condition</div>
+									</div>
+									<div class="stat">
+										<div class="stat-title"><i class="fa-solid fa-temperature-arrow-up"></i></div>
+										<div class="stat-value"><span class="min-temp">--</span>°F</div>
+										<div class="stat-desc">Max. Temp</div>
+									</div>
+									<div class="stat">
+										<div class="stat-title"><i class="fa-solid fa-temperature-arrow-down"></i></div>
+										<div class="stat-value"><span class="max-temp">--</span>°F</div>
+										<div class="stat-desc">Min. Temp</div>
+									</div>
+								</div>
+				</section>
+			</div>
 		</main>
 		<script src="./src/main.js"></script>
 	</body>

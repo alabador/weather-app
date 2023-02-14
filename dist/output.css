@@ -1188,18 +1188,6 @@ html {
   opacity: 0.6;
 }
 
-.table {
-  position: relative;
-  text-align: left;
-}
-
-.table th:first-child {
-  position: sticky;
-  position: -webkit-sticky;
-  left: 0px;
-  z-index: 11;
-}
-
 .btn:active:hover,
   .btn:active:focus {
   animation: none;
@@ -1430,64 +1418,6 @@ html {
   border-bottom-width: calc(0px * var(--tw-divide-y-reverse));
 }
 
-.table :where(th, td) {
-  white-space: nowrap;
-  padding: 1rem;
-  vertical-align: middle;
-}
-
-.table tr.active th,
-    .table tr.active td,
-    .table tr.active:nth-child(even) th,
-    .table tr.active:nth-child(even) td {
-  --tw-bg-opacity: 1;
-  background-color: hsl(var(--b3, var(--b2)) / var(--tw-bg-opacity));
-}
-
-.table tr.hover:hover th,
-    .table tr.hover:hover td,
-    .table tr.hover:nth-child(even):hover th,
-    .table tr.hover:nth-child(even):hover td {
-  --tw-bg-opacity: 1;
-  background-color: hsl(var(--b3, var(--b2)) / var(--tw-bg-opacity));
-}
-
-.table:where(:not(.table-zebra)) :where(thead, tbody, tfoot) :where(tr:not(:last-child) :where(th, td)) {
-  border-bottom-width: 1px;
-  --tw-border-opacity: 1;
-  border-color: hsl(var(--b2, var(--b1)) / var(--tw-border-opacity));
-}
-
-.table :where(thead, tfoot) :where(th, td) {
-  --tw-bg-opacity: 1;
-  background-color: hsl(var(--b2, var(--b1)) / var(--tw-bg-opacity));
-  font-size: 0.75rem;
-  line-height: 1rem;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.table :where(tbody th, tbody td) {
-  --tw-bg-opacity: 1;
-  background-color: hsl(var(--b1) / var(--tw-bg-opacity));
-}
-
-:where(.table *:first-child) :where(*:first-child) :where(th, td):first-child {
-  border-top-left-radius: 0.5rem;
-}
-
-:where(.table *:first-child) :where(*:first-child) :where(th, td):last-child {
-  border-top-right-radius: 0.5rem;
-}
-
-:where(.table *:last-child) :where(*:last-child) :where(th, td):first-child {
-  border-bottom-left-radius: 0.5rem;
-}
-
-:where(.table *:last-child) :where(*:last-child) :where(th, td):last-child {
-  border-bottom-right-radius: 0.5rem;
-}
-
 @keyframes toast-pop {
   0% {
     transform: scale(0.9);
@@ -1522,10 +1452,6 @@ html {
   height: 4rem;
   width: 4rem;
   padding: 0px;
-}
-
-.stats-horizontal {
-  grid-auto-flow: column;
 }
 
 .stats-vertical {
@@ -1583,19 +1509,6 @@ html {
   line-height: 1.5rem;
 }
 
-.stats-horizontal > :not([hidden]) ~ :not([hidden]) {
-  --tw-divide-x-reverse: 0;
-  border-right-width: calc(1px * var(--tw-divide-x-reverse));
-  border-left-width: calc(1px * calc(1 - var(--tw-divide-x-reverse)));
-  --tw-divide-y-reverse: 0;
-  border-top-width: calc(0px * calc(1 - var(--tw-divide-y-reverse)));
-  border-bottom-width: calc(0px * var(--tw-divide-y-reverse));
-}
-
-.stats-horizontal {
-  overflow-x: auto;
-}
-
 .stats-vertical > :not([hidden]) ~ :not([hidden]) {
   --tw-divide-y-reverse: 0;
   border-top-width: calc(1px * calc(1 - var(--tw-divide-y-reverse)));
@@ -1613,9 +1526,9 @@ html {
   grid-column: span 2 / span 2;
 }
 
-.mx-8 {
-  margin-left: 2rem;
-  margin-right: 2rem;
+.my-8 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .mt-8 {
@@ -1628,10 +1541,6 @@ html {
 
 .flex {
   display: flex;
-}
-
-.table {
-  display: table;
 }
 
 .grid {
@@ -1686,6 +1595,11 @@ html {
   border-radius: 0.5rem;
 }
 
+.bg-neutral {
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--n) / var(--tw-bg-opacity));
+}
+
 .bg-primary {
   --tw-bg-opacity: 1;
   background-color: hsl(var(--p) / var(--tw-bg-opacity));
@@ -1696,21 +1610,6 @@ html {
   background-color: rgb(203 213 225 / var(--tw-bg-opacity));
 }
 
-.bg-secondary {
-  --tw-bg-opacity: 1;
-  background-color: hsl(var(--s) / var(--tw-bg-opacity));
-}
-
-.bg-accent {
-  --tw-bg-opacity: 1;
-  background-color: hsl(var(--a) / var(--tw-bg-opacity));
-}
-
-.bg-neutral {
-  --tw-bg-opacity: 1;
-  background-color: hsl(var(--n) / var(--tw-bg-opacity));
-}
-
 .object-center {
   -o-object-position: center;
      object-position: center;
@@ -1718,6 +1617,10 @@ html {
 
 .p-4 {
   padding: 1rem;
+}
+
+.p-6 {
+  padding: 1.5rem;
 }
 
 .text-2xl {
@@ -1780,6 +1683,12 @@ html {
   border: 1px solid white;
 }
 
+body {
+  background-image: url('../img/kenrick-mills-1h2Pg97SXfA-unsplash.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 @media (min-width: 768px) {
   .md\:stats-horizontal {
     grid-auto-flow: column;
@@ -1800,12 +1709,21 @@ html {
 }
 
 @media (min-width: 640px) {
-  .sm\:m-8 {
-    margin: 2rem;
+  .sm\:p-8 {
+    padding: 2rem;
   }
 }
 
 @media (min-width: 768px) {
+  .md\:my-0 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  .md\:ml-8 {
+    margin-left: 2rem;
+  }
+
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
