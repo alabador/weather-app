@@ -83,16 +83,9 @@ let weather = {
     },
 
     search: function() {
-        // this.getWeather(document.querySelector('#searchbar').value);
         this.getWeather(document.querySelector('#searchbar').value);
         this.getForecast(document.querySelector('#searchbar').value);
     },
-    // changeImg: function() {
-    //     const imageUrl = "url('https://picsum.photos/800')";
-    //     const body = document.querySelector('body');
-    //     // document.body.style.backgroundImage = none;
-    //     document.body.style.backgroundImage = imageUrl;
-    // },
     conversion: 'imperial',
 }
 
@@ -101,7 +94,6 @@ const form = document.querySelector('#search-form');
 form.addEventListener("submit", function(e) {
     e.preventDefault();
     weather.search();
-    // weather.changeImg();
 }); 
 
 const switchButton = document.querySelector('.temp-switch');
